@@ -37,26 +37,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -70,30 +56,33 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'My Site',
+     navbar: {
+        title: 'Documentation',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/eeldev_icon.png',
         },
-        items: [
+        items: [ 
+          //{to: '/blog', label: 'Changelogs', position: 'left'},
+          /*
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'intro',
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          */
+          { href: 'https://eeldev.com', label: 'eeldev.com' },
+          { href: 'https://www.unrealengine.com/marketplace/slug/af157f773f084ca89036cd7bc03fb416', label: 'Unreal Marketplace' },
+          { href: 'https://www.youtube.com/channel/UC6Rhr_F5BxwfTtcADVPUNYA', label: 'YouTube', position: 'right' },
+          { href: 'https://discord.gg/3Yu7pEy', label: 'Discord', position: 'right'},
+          { href: 'https://twitter.com/dryeeldev', label: 'Twitter', position: 'right' },
         ],
       },
-      footer: {
+footer: {
         style: 'dark',
         links: [
+          /** 
           {
             title: 'Docs',
             items: [
@@ -107,19 +96,21 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'YouTube',
+                href: 'https://www.youtube.com/channel/UC6Rhr_F5BxwfTtcADVPUNYA',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/3Yu7pEy',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Twitter',
+                href: 'https://twitter.com/dryeeldev',
               },
             ],
           },
+          */
+          /*
           {
             title: 'More',
             items: [
@@ -133,8 +124,9 @@ const config = {
               },
             ],
           },
+          */
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} eelDev AB`,
       },
       prism: {
         theme: prismThemes.github,
