@@ -2,5 +2,5 @@
 sidebar_position: 3
 ---
 
-# Purchase Plugin
+# Auth: Epic Launcher
 Not available yet
